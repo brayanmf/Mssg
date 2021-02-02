@@ -1,0 +1,239 @@
+/*llama por class*/
+
+*{
+	margin:  0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:focus{/*para que no aparezca el borde por defecto*/
+	outline:none;
+}
+
+body{/*fondo gris*/
+	background: #DBDBDB;
+	font-family: 'Open sans';
+}
+/*formulario*/
+.form_1{
+	width: 1050px;
+	height: 530px;
+	margin: 50px auto ;
+
+	display: flex;
+
+	background: #fff;
+	border-radius: 10px;
+	overflow:	hidden;/*recorte,scroll,etc dentro del contenido si es visible o no*/
+	box-shadow: 0px .0px 20px rgba(0,0,0,0.2);/*efecto de sombra*/
+
+
+} 
+/*info de contacto*/
+.contact_info::before{/*fondo de imagen*/
+	content: 	'';
+	width: 	100%;/*___darle un tamaño 100 a contact*/
+	height: 100%;
+	position: 	absolute;	
+	top: 0;
+	left: 	0;
+
+	background: #4091EC;
+	opacity: 	0.9; 	
+
+}
+.contact_info{/*centras el txt y la imagen*/
+	width: 38%; /*__*/
+	position: relative;
+	display: flex;/*en un cuadro los elementos*/
+	flex-direction: column;/*colocarles en columnas*/
+	align-items:center;
+	justify-content:center;
+
+
+	background-image: url('../1.png');/*.. retroceder*/
+	background-size: cover;
+	background-position: center center;/*center center vertical y horizontal*/
+}
+
+
+
+
+
+
+
+
+.info_title,/*encima del fondo y el color del txt*/
+.info_items{
+	position: relative;/*encima de la capa*/
+	z-index: 2;/*le da un indice de pos de capa*/
+	color: #fff;
+}
+
+.info_title{/*espacio de abajo*/
+	margin-bottom: 60px;
+}
+.info_title span{/*icono*/
+	font-size: 100px;
+	display: block;
+	text-align: center;
+	margin-bottom: 15px;
+
+}
+.info_title h2{
+	font-size: 35px;
+	text-align: center;
+}
+
+
+.info_items p{/*txt */
+	 display: flex;
+	 align-items: center;
+	  font-size: 16PX;
+	  font-weight: 600;
+	  margin-bottom: 10px;
+
+}
+
+/*tamaño de los iconos*/
+.info_items p:nth-child(1)span{
+	font-size: 30px;
+	margin-right: 10px;
+
+}
+.info_items p:nth-child(2)span{
+	font-size: 50px;
+	margin-right: 15px;
+	margin-left: 4px;
+}
+
+/*formulario contacto*/
+form.form_contact{
+	width: 62%;
+	padding: 30px 40px;
+}
+form.form_contact h2{
+	font-size: 25px;/*tamaño de txt*/
+	font-weight: 600;/*grosor de txt*/
+	color: #420D01;
+	margin-bottom:30px;
+}
+form.form_contact .user_info{
+	display: flex;
+	flex-direction: column;
+}
+form.form_contact label{
+	font-weight: 600;
+}
+form.form_contact input,
+form.form_contact textarea{
+	width: 100%;
+	padding: 8px 0px 5px;/*arrba costado abajo*/
+	margin-bottom: 20px;/*marfen de separado*/
+	border:none;
+	border-bottom: 2px solid #d1d1d1;/*color raya de abajo*/
+
+
+	font-family: 'Open sans'; 
+	color: #5A5A5A;
+	font-size: 14PX;
+	font-weight: 400;
+
+
+
+}
+form.form_contact textarea{/*para que txttarea no se puede agranddar */
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 90px;
+}
+form.form_contact input[type="button"]{
+	width: 180px;
+	background: #4091EC;
+	padding: 10px;
+	border:none;
+	border-radius: 25px;
+	align-self: flex-end;/*por que indicamos en el principal que es flex */
+
+	color: #fff;
+	font-family: 'Open sans'; 
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+form.form_contact input[type="button"]:hover{
+	background:#3371b6;
+
+}
+/*Ventana de errores*/
+
+.mensaje_salida{
+	width: 100%;/*fondo padre*/
+	height: 100vh;
+	background: rgba(0,0,0,0.7);
+
+
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 3;
+
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+
+}
+.mensaje_modal{/*fondo*/
+	background:#fff;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	width: 400px;
+	padding: 30px 20px 15px; 
+}
+
+
+
+
+.mensaje_modal h3{
+	text-align: center;
+	font-family: 'Ubuntu';
+	font-size: 20px;
+	font-weight: 400;
+
+}
+.mensaje_modal h3:after{
+content: '';
+display: block;
+width: 100%;
+height: 1px;
+background:#C5C5C5;
+margin: 10px 0px 15px; 
+}
+
+.mensaje_modal p{/*color al centro*/
+	font-size: 16px;
+	color: #606060;
+}
+
+/*icono*/
+.mensaje_modal p:before{
+content: "\f00d";
+
+font-family: fontAwesome;
+display: inline-block;
+color: #E25151;
+margin-right: 8px;
+
+}
+
+
+#btnclose{
+	display:  inline-block;
+	padding: 3px 10px;
+	margin-top: 10px;/*espacio entre el txt btn*/
+	background:#E25151;
+	color: #fff;
+	border:2px solid #b14141;
+	cursor: pointer;
+	float: right;
+}
