@@ -1,4 +1,4 @@
-/*llama por class*/
+
 
 *{
 	margin:  0;
@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 
-:focus{/*para que no aparezca el borde por defecto*/
+:focus{
 	outline:none;
 }
 
@@ -24,15 +24,15 @@ body{/*fondo gris*/
 
 	background: #fff;
 	border-radius: 10px;
-	overflow:	hidden;/*recorte,scroll,etc dentro del contenido si es visible o no*/
+	overflow:	hidden;
 	box-shadow: 0px .0px 20px rgba(0,0,0,0.2);/*efecto de sombra*/
 
 
 } 
 /*info de contacto*/
-.contact_info::before{/*fondo de imagen*/
+.contact_info::before{
 	content: 	'';
-	width: 	100%;/*___darle un tamaño 100 a contact*/
+	width: 	100%;
 	height: 100%;
 	position: 	absolute;	
 	top: 0;
@@ -42,18 +42,18 @@ body{/*fondo gris*/
 	opacity: 	0.9; 	
 
 }
-.contact_info{/*centras el txt y la imagen*/
+.contact_info{
 	width: 38%; /*__*/
 	position: relative;
-	display: flex;/*en un cuadro los elementos*/
-	flex-direction: column;/*colocarles en columnas*/
+	display: flex;
+	flex-direction: column;
 	align-items:center;
 	justify-content:center;
 
 
-	background-image: url('../1.png');/*.. retroceder*/
+	background-image: url('../1.png');
 	background-size: cover;
-	background-position: center center;/*center center vertical y horizontal*/
+	background-position: center center;
 }
 
 
@@ -63,17 +63,17 @@ body{/*fondo gris*/
 
 
 
-.info_title,/*encima del fondo y el color del txt*/
+.info_title,
 .info_items{
-	position: relative;/*encima de la capa*/
-	z-index: 2;/*le da un indice de pos de capa*/
+	position: relative;
+	z-index: 2;
 	color: #fff;
 }
 
 .info_title{/*espacio de abajo*/
 	margin-bottom: 60px;
 }
-.info_title span{/*icono*/
+.info_title span{
 	font-size: 100px;
 	display: block;
 	text-align: center;
@@ -95,7 +95,7 @@ body{/*fondo gris*/
 
 }
 
-/*tamaño de los iconos*/
+
 .info_items p:nth-child(1)span{
 	font-size: 30px;
 	margin-right: 10px;
@@ -142,7 +142,7 @@ form.form_contact textarea{
 
 
 }
-form.form_contact textarea{/*para que txttarea no se puede agranddar */
+form.form_contact textarea{
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 90px;
@@ -153,7 +153,7 @@ form.form_contact input[type="button"]{
 	padding: 10px;
 	border:none;
 	border-radius: 25px;
-	align-self: flex-end;/*por que indicamos en el principal que es flex */
+	align-self: flex-end;
 
 	color: #fff;
 	font-family: 'Open sans'; 
@@ -166,7 +166,7 @@ form.form_contact input[type="button"]:hover{
 	background:#3371b6;
 
 }
-/*Ventana de errores*/
+
 
 .mensaje_salida{
 	width: 100%;/*fondo padre*/
@@ -184,7 +184,7 @@ form.form_contact input[type="button"]:hover{
 	align-items:  center;
 
 }
-.mensaje_modal{/*fondo*/
+.mensaje_modal{
 	background:#fff;
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 	width: 400px;
@@ -210,7 +210,7 @@ background:#C5C5C5;
 margin: 10px 0px 15px; 
 }
 
-.mensaje_modal p{/*color al centro*/
+.mensaje_modal p{
 	font-size: 16px;
 	color: #606060;
 }
